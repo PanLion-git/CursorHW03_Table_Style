@@ -1,0 +1,168 @@
+:root {
+  --background-color: rgb(49, 49, 49);
+  --color: rgb(232, 232, 232);
+  --background-color-object: rgb(77, 77, 77);
+}
+
+* { font-family: 'Arial', sans-serif; }
+
+body {
+  margin: auto;
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+.divContainer {
+  width: 90%;
+  margin: auto;
+  font-size: 18px;
+}
+
+.divTable {
+  margin-top: 60px;
+}
+
+table {
+  font-size: 16px;
+  text-align: left;
+  border-collapse: collapse;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px var(--color);
+  width: 75%;
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+th {
+  padding: 12px;
+}
+
+/* table th:first-child { border-top-left-radius: 5px; } */
+/* table th:last-child { border-top-right-radius: 5px;} */
+td {
+  border-top: 1px solid var(--color);
+  padding: 12px;
+}
+/* table td:first-child { border-bottom-left-radius: 15px;} */
+/* table td:last-child {  border-bottom-right-radius: 15px;} */
+/* td:nth-child(even) { background: rgb(137, 134, 126);} */
+/* td:nth-child(odd) {  background: rgb(102, 93, 85);} */
+
+td:nth-child(1) {
+  width: 50%;
+}
+td:nth-child(2) {
+  width: 25%;
+}
+td:nth-child(3) {
+  width: 25%;
+}
+
+.selectMode {
+  background: inherit;
+  color: var(--color);
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+option{
+  color: var(--color);
+  background: var(--background-color);
+}
+
+.buttonAction {
+  background: inherit;
+  color: var(--color);
+  border: none;
+  outline: none;
+  font-weight: bolder;
+  float: right;
+}
+
+
+.inputSearch {
+  background: url("../img/Very-Basic-Search-icon.png")  5% no-repeat;
+  background-color:  var(--background-color-object);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: inherit;
+  padding: 2px;
+  padding-left: 36px;
+  font-weight: bolder;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+.inputCheckBox, .inputCheckBoxTop {
+  display: none;
+}
+
+/* стили для метки */
+.labelCheckBox {
+  font-weight: bolder;
+  vertical-align: middle;
+}
+
+/* формування вигляду чекбокса у псевдоелементі before */
+.labelCheckBox:before {
+  content: " ";
+  color: var(--color);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  position: relative;
+  text-align: center;
+  width: 8px;
+  height: 8px;
+  background-color: var(--background-color-object);
+  border: 1px solid var(--color);
+  
+  border-radius: 5px;
+  vertical-align: middle;
+
+  padding: 2px 5px 8px 5px;
+}
+
+
+/* варіанти для статуса чекбокса */
+/* checked */
+.inputCheckBox:checked + .labelCheckBox:before,
+.inputCheckBoxTop:checked + .labelCheckBox:before
+{
+  background-color: blue;
+  border: 1px solid blue;
+}
+
+.inputCheckBox:checked + .labelCheckBox:before
+{
+  content: "V";
+}
+
+.inputCheckBoxTop:checked + .labelCheckBox:before
+{
+  content: "-";
+}
+
+/* disabled */
+.inputCheckBox:disabled + .labelCheckBox:before,
+.inputCheckBoxTop:disabled + .labelCheckBox:before
+{
+  background: inherit;
+  color: var(--color);
+}
+
+
+
+.imgEmptyBox {
+  display: inline-block;
+  width: 16px;
+}
